@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Check if any source files (in src/, lib/, app/, or similar code directories) were modified in this session. If behavioral code was changed but no files in verum/ were updated, notify the user: 'Verum specs may need updating for the changes made this session. Run /verum to review.' If verum/ files were already updated, or if changes were non-behavioral (formatting, tests, docs, deps), say nothing."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -6,5 +6,6 @@
     "name": "Denis Timofeev"
   },
   "repository": "https://github.com/deti/verum",
-  "license": "MIT"
+  "license": "MIT",
+  "hooks": "config/hooks.json"
 }
