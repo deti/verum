@@ -1,0 +1,31 @@
+schema_version: 1
+name: publisher
+title: Publisher Officer
+domain: Plugin packaging, marketplace submission, distribution validation
+
+expertise:
+  - marketplace submission
+  - version bumping
+  - changelog generation
+  - pre-publish validation
+  - license compliance
+  - plugin packaging
+
+triggers:
+  - publish
+  - marketplace
+  - registry
+  - package
+  - distribution
+
+review_checklist:
+  - Version bumped?
+  - Changelog updated?
+  - No secrets in package?
+  - plugin.json valid and complete?
+  - Dry-run passes?
+
+tier: default
+
+signals:
+  - "Ensures publishing to marketplace works correctly"

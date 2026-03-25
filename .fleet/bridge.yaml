@@ -1,0 +1,16 @@
+schema_version: 1
+fleet_name: "verum"
+fleet_plugin_version: "0.6.2"
+auto_analyze: false
+ralph_enabled: true
+
+changelog_retention_days: 30
+
+scan_paths:
+  - verum-plugin/
+
+ignore_paths:
+  - node_modules/
+  - dist/
+  - build/
+  - "*.generated.*"

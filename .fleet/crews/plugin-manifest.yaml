@@ -1,0 +1,37 @@
+schema_version: 1
+name: plugin-manifest
+domain: Plugin identity and configuration
+description: The plugin.json manifest, plugin README, version, and metadata. Owns the plugin's contract with the Claude Code plugin loader.
+last_run_commit: ""
+
+paths:
+  - verum-plugin/.claude-plugin/**
+  - verum-plugin/README.md
+
+partners:
+  - commands
+  - skills
+  - agents
+  - hooks
+
+sdlc_concerns:
+  - Version bumps are release-gating events
+  - plugin.json must conform to Claude Code plugin specification
+  - README accuracy matters — primary documentation for users installing the plugin
+  - Changes should be coordinated with actual capability changes
+
+owner_context: |
+  This crew owns the plugin's identity: name, version, description, author,
+  and the README that users see when installing. Version bumps here gate releases.
+  The plugin.json schema must always conform to Claude Code's plugin spec.
+
+tech_stack:
+  - json
+  - markdown
+
+monitoring:
+  dashboards: []
+  alerts: []
+
+deployment:
+  type: none

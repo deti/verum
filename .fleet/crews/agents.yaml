@@ -1,0 +1,34 @@
+schema_version: 1
+name: agents
+domain: Agent definitions
+description: Autonomous verification agents that compose skills into multi-step validation workflows. Markdown files with YAML frontmatter.
+last_run_commit: ""
+
+paths:
+  - verum-plugin/agents/**
+
+partners:
+  - skills
+  - commands
+  - hooks
+
+sdlc_concerns:
+  - Agent definitions must reference valid skills and commands
+  - Agent scope and permissions must be clearly bounded
+  - Changes affect automated workflows — review carefully
+
+owner_context: |
+  Agents are higher-level orchestrators that combine skills and commands
+  into multi-step verification workflows. Each is a Markdown file with
+  YAML frontmatter (name, description, tools, model).
+
+tech_stack:
+  - markdown
+  - yaml-frontmatter
+
+monitoring:
+  dashboards: []
+  alerts: []
+
+deployment:
+  type: none

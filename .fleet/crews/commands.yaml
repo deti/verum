@@ -1,0 +1,34 @@
+schema_version: 1
+name: commands
+domain: Slash command definitions
+description: Markdown files with YAML frontmatter that users invoke directly via /verum-* in Claude Code. Each command represents a discrete verification or validation action.
+last_run_commit: ""
+
+paths:
+  - verum-plugin/commands/**
+
+partners:
+  - skills
+  - hooks
+  - plugin-manifest
+
+sdlc_concerns:
+  - Valid YAML frontmatter required
+  - Command names must be unique across the plugin
+  - User-facing interface — changes affect public API
+
+owner_context: |
+  Commands are the primary user-facing entry points for Verum.
+  Each is a Markdown file with YAML frontmatter (description, argument-hint, allowed-tools).
+  Commands describe workflows in natural language — they are NOT scripts.
+
+tech_stack:
+  - markdown
+  - yaml-frontmatter
+
+monitoring:
+  dashboards: []
+  alerts: []
+
+deployment:
+  type: none

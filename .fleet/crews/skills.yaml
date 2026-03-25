@@ -1,0 +1,33 @@
+schema_version: 1
+name: skills
+domain: Reusable skill definitions
+description: Composable building blocks for verification logic. Each skill is a directory under skills/ containing a SKILL.md file.
+last_run_commit: ""
+
+paths:
+  - verum-plugin/skills/**
+
+partners:
+  - commands
+  - agents
+
+sdlc_concerns:
+  - Each skill directory must contain a well-formed SKILL.md
+  - Skills should be self-contained
+  - Most-reused component — changes have wide blast radius
+  - Naming conventions matter since directory names become identifiers
+
+owner_context: |
+  Skills are the composable building blocks that commands and agents call upon.
+  Each skill lives in its own directory under skills/ with a SKILL.md file.
+  Skills are the most foundational layer — changes here affect commands and agents.
+
+tech_stack:
+  - markdown
+
+monitoring:
+  dashboards: []
+  alerts: []
+
+deployment:
+  type: none

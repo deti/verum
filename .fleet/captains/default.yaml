@@ -1,0 +1,23 @@
+schema_version: 1
+name: "default"
+domain: "Verum plugin verification and validation framework"
+
+# Crews this captain orchestrates (by name from .fleet/crews/)
+crews:
+  - commands
+  - skills
+  - agents
+  - hooks
+  - plugin-manifest
+
+# Specialist agents to dispatch during planning and review
+specialists: []
+
+# Verification commands run after all crews complete
+verification:
+  build: ""
+  test: ""
+  lint: ""
+
+# Where plans are written
+plan_dir: ".fleet/plans"

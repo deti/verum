@@ -1,0 +1,36 @@
+schema_version: 1
+name: hooks
+domain: Hook handlers and configuration
+description: Defines when and how Verum intervenes in the Claude Code lifecycle — pre-commit checks, post-generation validation, file-write interception. Includes hooks.json config and handler definitions.
+last_run_commit: ""
+
+paths:
+  - verum-plugin/hooks/**
+
+partners:
+  - commands
+  - skills
+  - agents
+  - plugin-manifest
+
+sdlc_concerns:
+  - Most sensitive component — runs automatically, can block workflows
+  - Must not introduce latency into normal Claude Code operations
+  - Error handling is critical — a broken hook degrades the entire experience
+  - hooks.json changes need careful review for performance impact
+
+owner_context: |
+  Hooks are the most sensitive part of the plugin. They execute automatically
+  during Claude Code lifecycle events (PreToolUse, PostToolUse, Stop, etc.).
+  Configuration lives in hooks.json. A broken hook can block all user workflows.
+
+tech_stack:
+  - json
+  - markdown
+
+monitoring:
+  dashboards: []
+  alerts: []
+
+deployment:
+  type: none
